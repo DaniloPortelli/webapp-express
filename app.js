@@ -11,6 +11,8 @@ import express from "express";
 
     app.use( '/movies' , movieRouter ) 
 
+    app.use(express.json())
+
     app.listen( port, () => {
         console.log( `Server in funzione sulla porta: ${port}` )
     } )
