@@ -9,9 +9,11 @@ import express from "express";
 
     app.use(cors());
 
+    app.use(express.json())
+
+
     app.use( '/movies' , movieRouter ) 
 
-    app.use(express.json())
 
     app.listen( port, () => {
         console.log( `Server in funzione sulla porta: ${port}` )
